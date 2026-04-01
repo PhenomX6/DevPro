@@ -1,4 +1,3 @@
-// Barra de progresso de leitura
 window.onscroll = function () {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   let height =
@@ -7,35 +6,36 @@ window.onscroll = function () {
   let scrolled = (winScroll / height) * 100;
   document.getElementById("progress-bar").style.width = scrolled + "%";
 
-  // Header fixo com sombra ao rolar
   const header = document.getElementById("header");
   if (winScroll > 50) {
     header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.5)";
+    header.style.background = "rgba(2, 6, 23, 0.95)";
   } else {
     header.style.boxShadow = "none";
+    header.style.background = "rgba(2, 6, 23, 0.8)";
   }
 };
 
 // FAQ Accordion
-document.querySelectorAll(".accordion-header").forEach((button) => {
-  button.addEventListener("click", () => {
-    const accordionItem = button.parentElement;
-    const isOpen = accordionItem.classList.contains("active");
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
+    const content = item.querySelector(".accordion-content");
+    const isOpen = item.classList.contains("active");
 
-    // Fecha todos antes de abrir o clicado
-    document.querySelectorAll(".accordion-item").forEach((item) => {
-      item.classList.remove("active");
-      item.querySelector(".accordion-content").style.display = "none";
+    document.querySelectorAll(".accordion-item").forEach((otherItem) => {
+      otherItem.classList.remove("active");
+      otherItem.querySelector(".accordion-content").style.display = "none";
     });
 
     if (!isOpen) {
-      accordionItem.classList.add("active");
-      accordionItem.querySelector(".accordion-content").style.display = "block";
+      item.classList.add("active");
+      content.style.display = "block";
     }
   });
 });
 
-// LÓGICA DO CARROSSEL DE FEEDBACKS
+// Carrossel Desktop
 const track = document.getElementById("track");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -43,7 +43,9 @@ const cards = document.querySelectorAll(".feedback-card");
 let currentIndex = 0;
 
 function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  if (window.innerWidth > 900) {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 }
 
 nextBtn.addEventListener("click", () => {
@@ -54,6 +56,14 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + cards.length) % cards.length;
   updateCarousel();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 900) {
+    track.style.transform = `none`;
+  } else {
+    updateCarousel();
+  }
 });
 
 // Mensagem de boas-vindas console "Hackerman"
