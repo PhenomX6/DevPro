@@ -2,11 +2,14 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>DevPro Workflow | Engenharia de Landing Pages com IA</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;700;900&display=swap"
       rel="stylesheet"
@@ -19,11 +22,11 @@
       <div class="container navbar">
         <div class="logo-area">
           <span class="logo">DEV<span>PRO</span></span>
-          <span class="version">v2.4.0</span>
+          <span class="version">v2.4.6</span>
         </div>
-        <nav>
+        <nav class="desktop-nav">
           <a href="#metodo">Metodologia</a>
-          <a href="#stack">Tech Stack</a>
+          <a href="#stack">Stack</a>
           <a href="#feedbacks">Feedbacks</a>
           <a href="#faq">Dúvidas</a>
           <a href="SEU_LINK_DE_CHECKOUT" class="btn-sm">Acessar Guia</a>
@@ -37,9 +40,8 @@
           <div class="badge">Disponível para os primeiros 100 alunos</div>
           <h1>Escalando o Front-end com <span>Sistemas de IA</span></h1>
           <p>
-            O guia definitivo para desenvolvedores e freelancers que buscam o
-            equilíbrio entre a velocidade da IA e a qualidade do código
-            artesanal.
+            O guia definitivo para freelancers que buscam o equilíbrio entre a
+            velocidade da IA e a qualidade do código artesanal.
           </p>
           <div class="hero-actions">
             <a href="SEU_LINK_DE_CHECKOUT" class="btn-main"
@@ -67,35 +69,76 @@
         <div class="container">
           <div class="section-header">
             <h2>Otimize cada <span>linha de código</span></h2>
-            <p>
-              Nosso workflow cobre do briefing à entrega final com o cliente.
-            </p>
           </div>
-
           <div class="features-complex">
             <div class="feature-card large">
-              <div class="icon"></div>
-              <h3>Geração de Estruturas Semânticas</h3>
+              <div class="icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#38bdf8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Estruturas Semânticas</h3>
               <p>
                 Aprenda a criar prompts que geram HTML5 acessível e SEO
-                friendly, evitando as "div soups" comuns em geradores
-                automáticos.
+                friendly, evitando códigos sujos.
               </p>
             </div>
             <div class="feature-card">
-              <div class="icon"></div>
-              <h3>Design System com IA</h3>
+              <div class="icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#38bdf8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9"></path>
+                  <path
+                    d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Design System</h3>
               <p>
                 Como usar ferramentas Low-code para criar guias de estilo que
-                conversam perfeitamente com seu código CSS.
+                conversam com seu código.
               </p>
             </div>
             <div class="feature-card">
-              <div class="icon"></div>
-              <h3>Prospecção Consultiva</h3>
+              <div class="icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#38bdf8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Prospecção</h3>
               <p>
                 Scripts prontos para vender não apenas um site, mas uma solução
-                de conversão para empresas.
+                de conversão.
               </p>
             </div>
           </div>
@@ -104,32 +147,34 @@
 
       <section class="comparison">
         <div class="container">
-          <table>
-            <thead>
-              <tr>
-                <th>Recurso</th>
-                <th>Tradicional</th>
-                <th>Workflow DevPro</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Tempo de Desenvolvimento</td>
-                <td>3 a 5 dias</td>
-                <td>2 a 4 horas</td>
-              </tr>
-              <tr>
-                <td>Custo de Produção</td>
-                <td>Alto (Manual)</td>
-                <td>Baixo (Otimizado)</td>
-              </tr>
-              <tr>
-                <td>Foco do Profissional</td>
-                <td>Sintaxe/Erro</td>
-                <td>Estratégia/UX</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Recurso</th>
+                  <th>Tradicional</th>
+                  <th>Workflow DevPro</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Desenvolvimento</td>
+                  <td>3 a 5 dias</td>
+                  <td>2 a 4 horas</td>
+                </tr>
+                <tr>
+                  <td>Custo Produção</td>
+                  <td>Alto (Manual)</td>
+                  <td>Baixo (IA)</td>
+                </tr>
+                <tr>
+                  <td>Foco Profissional</td>
+                  <td>Sintaxe/Erro</td>
+                  <td>Estratégia/UX</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -137,7 +182,6 @@
         <div class="container">
           <div class="section-header">
             <h2>O que dizem os <span>Operadores</span></h2>
-            <p>Resultados reais de quem aplicou o workflow na prática.</p>
           </div>
           <div class="carousel-wrapper">
             <button class="carousel-btn prev" id="prevBtn">❮</button>
@@ -170,34 +214,10 @@
                 <div class="feedback-card">
                   <div class="rating">★★★★★</div>
                   <p>
-                    "O segredo está nos prompts. Ja posso me entitular como Vibe
-                    Coder? AHahahahha."
+                    "O segredo está nos prompts. Já posso me intitular como Vibe
+                    Coder? Ahahahah."
                   </p>
                   <span class="author">— Ana Cláudia</span>
-                </div>
-                <div class="feedback-card">
-                  <div class="rating">★★★★★</div>
-                  <p>
-                    "Bati minha meta de 10 freelas no mês. O custo-benefício
-                    desse guia é imbatível."
-                  </p>
-                  <span class="author">— Thiago Souza</span>
-                </div>
-                <div class="feedback-card">
-                  <div class="rating">★★★★★</div>
-                  <p>
-                    "Consegui automatizar toda a estrutura visual. Agora foco só
-                    no que o cliente quer."
-                  </p>
-                  <span class="author">— Fernanda M.</span>
-                </div>
-                <div class="feedback-card">
-                  <div class="rating">★★★★★</div>
-                  <p>
-                    "Sistema limpo, profissional e lucrativo. Nota 10 pro
-                    suporte e pro conteúdo."
-                  </p>
-                  <span class="author">— Paulo G.</span>
                 </div>
               </div>
             </div>
@@ -208,13 +228,15 @@
 
       <section id="faq" class="faq">
         <div class="container">
-          <h2>Perguntas Frequentes</h2>
+          <h2 style="text-align: center; margin-bottom: 30px">
+            Perguntas Frequentes
+          </h2>
           <div class="accordion">
             <div class="accordion-item">
               <div class="accordion-header">Preciso saber programar?</div>
               <div class="accordion-content">
-                O guia ensina como usar IAs ao seu favor, mas se você já tem
-                base, seu progresso será 10x mais rápido.
+                O guia ensina do zero, mas se você já tem base, seu progresso
+                será 10x mais rápido.
               </div>
             </div>
             <div class="accordion-item">
@@ -234,7 +256,7 @@
         <div class="footer-grid">
           <div class="footer-info">
             <span class="logo">DEV<span>PRO</span></span>
-            <p>Elevando o nível do desenvolvimento freelancer no Brasil.</p>
+            <p>Elevando o nível do desenvolvimento freelancer.</p>
           </div>
           <div class="footer-contact">
             <p>Suporte: suportefvdev@gmail.com</p>
